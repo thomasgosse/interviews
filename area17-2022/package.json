@@ -1,0 +1,23 @@
+{
+  "name": "area-ce",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Thomas Gosse",
+    "email": "thms.gosse@gmail.com"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "build:watch": "node build-watch.js",
+    "start": "http-serve public",
+    "start:dev": "yarn build:watch & yarn start",
+    "lighthouse:local": "yarn start & lighthouse http://127.0.0.1:8080"
+  },
+  "dependencies": {
+    "esbuild": "^0.14.23",
+    "esbuild-plugin-sass": "^1.0.1",
+    "http-serve": "^1.0.1",
+    "lighthouse": "^9.4.0",
+    "smoothscroll-polyfill": "^0.4.4"
+  }
+}
